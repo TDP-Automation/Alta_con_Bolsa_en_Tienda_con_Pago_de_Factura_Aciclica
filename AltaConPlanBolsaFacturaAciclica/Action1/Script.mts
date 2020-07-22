@@ -36,14 +36,14 @@ Call TipoEnvio()
 Call Financiamiento()
 Call GeneracionOrden()
 'If DataTable("e_Ambiente", "Login [Login]")<>"PROD" Then
-	Call PagoManual()
-'End If
-Call GestionLogistica()
-'If DataTable("e_Ambiente", "Login [Login]")<>"PROD" Then
-	Call EmpujeOrden()
-'End If
-Call OrdenCerrado()
-Call DetalleActividadOrden()
+'	Call PagoManual()
+''End If
+'Call GestionLogistica()
+''If DataTable("e_Ambiente", "Login [Login]")<>"PROD" Then
+'	Call EmpujeOrden()
+''End If
+'Call OrdenCerrado()
+'Call DetalleActividadOrden()
 
 Sub EncontrarAcuerdoComercial()
 		Do
