@@ -50,6 +50,7 @@ Call GeneracionOrden()
 'Call DetalleActividadOrden()
 
 Sub EncontrarAcuerdoComercial()
+	wait 10
 		Do
 		tiempo=0
 		Do
@@ -706,7 +707,7 @@ Sub Financiamiento()
 		If rs = DataTable("e_MedioPago", dtLocalSheet) Then
 				JavaWindow("Ejecutivo de interacción").JavaInternalFrame("Pago Inmediato").JavaList("Medio de pago").Select DataTable("e_MedioPago", dtLocalSheet)
 			    wait 1
-					JavaWindow("Ejecutivo de interacción").JavaInternalFrame("Pago Inmediato").JavaList("Cantidad de cuotas:").Select DataTable("e_Cant_Cuota" , dtaLocalSheet)
+					JavaWindow("Ejecutivo de interacción").JavaInternalFrame("Pago Inmediato").JavaList("Cantidad de cuotas:").Select DataTable("e_Cant_Cuota" , dtLocalSheet)
 					wait 1
 					JavaWindow("Ejecutivo de interacción").JavaInternalFrame("Pago Inmediato").JavaButton("Calcular").Click
 					JavaWindow("Ejecutivo de interacción").CaptureBitmap RutaEvidencias() &Num_Iter&"_"&"Financiamiento"&".png" , True
@@ -984,6 +985,7 @@ Sub GeneracionOrden()
 			wait 2
 		End If
 	End  If
+	
 	
 	wait 2
 	DataTable("s_Nro_Orden", dtLocalSheet) =JavaWindow("Ejecutivo de interacción").JavaInternalFrame("Orden 1207161A").GetROProperty("text")
